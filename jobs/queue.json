@@ -1,0 +1,1 @@
+[{"name": "smoke-py", "kind": "py", "code": "import platform,sys\nprint('VM:', platform.platform(), sys.version)"}, {"name": "tg-direct", "kind": "fetch", "url": "https://t.me/s/glassnode", "save": "results/tg_glassnode.html"}]
