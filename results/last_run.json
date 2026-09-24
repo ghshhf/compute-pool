@@ -1,16 +1,9 @@
 [
  {
-  "ok": true,
-  "name": "smoke-py",
+  "ok": false,
+  "err": "name 'get' is not defined",
+  "name": "dispatch",
   "secs": 0.0,
-  "at": "2026-09-24T20:38:00Z"
- },
- {
-  "ok": true,
-  "bytes": 101245,
-  "head": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Glassnode – Telegram</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-",
-  "name": "tg-direct",
-  "secs": 0.9,
-  "at": "2026-09-24T20:38:01Z"
+  "at": "2026-09-24T22:25:17Z"
  }
 ]
