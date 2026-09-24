@@ -1,9 +1,8 @@
 [
  {
-  "ok": false,
-  "err": "name 'get' is not defined",
+  "ok": true,
   "name": "dispatch",
-  "secs": 0.0,
-  "at": "2026-09-24T22:25:17Z"
+  "secs": 0.6,
+  "at": "2026-09-24T22:27:17Z"
  }
 ]

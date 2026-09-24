@@ -1,0 +1,64 @@
+{
+ "at": "2026-09-24T22:27:16Z",
+ "paths": {
+  "g4f/Provider": {
+   "count": 33,
+   "names": [
+    "AgentTools",
+    "BraveSearch",
+    "ChatGPTLightweight",
+    "ChatGptOss",
+    "Cloudflare",
+    "Copilot",
+    "CopilotApp",
+    "CopilotSession",
+    "DeepAI",
+    "DeepInfra",
+    "OperaAria",
+    "Perplexity",
+    "PhindAi",
+    "Pollinations",
+    "PollinationsImage",
+    "Quillbot",
+    "Qwen",
+    "TeachAnything",
+    "Yqcloud",
+    "Yupp",
+    "audio/",
+    "base_provider",
+    "github/",
+    "glm/",
+    "helper",
+    "hf_space/",
+    "local/",
+    "needs_auth/",
+    "openai/",
+    "qwen/",
+    "search/",
+    "template/",
+    "yupp/"
+   ]
+  },
+  "g4f/providers": {
+   "count": 12,
+   "names": [
+    "any_model_map",
+    "any_provider",
+    "asyncio",
+    "base_provider",
+    "cache",
+    "config_provider",
+    "create_images",
+    "helper",
+    "response",
+    "retry_provider",
+    "tool_support",
+    "types"
+   ]
+  },
+  "g4f/Provider/not-working": {
+   "count": 0,
+   "err": "ERR HTTPError:HTTP Error 404: Not Found"
+  }
+ }
+}
