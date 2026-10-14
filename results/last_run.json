@@ -3,14 +3,14 @@
   "ok": true,
   "name": "smoke-py",
   "secs": 0.0,
-  "at": "2026-10-14T19:55:45Z"
+  "at": "2026-10-14T22:56:39Z"
  },
  {
   "ok": true,
-  "bytes": 85254,
+  "bytes": 85251,
   "head": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Glassnode – Telegram</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-",
   "name": "tg-direct",
-  "secs": 0.7,
-  "at": "2026-10-14T19:55:45Z"
+  "secs": 0.6,
+  "at": "2026-10-14T22:56:39Z"
  }
 ]
