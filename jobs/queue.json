@@ -21,7 +21,7 @@
   "name": "phone-sys",
   "kind": "py",
   "target": "phone",
-  "code": "import platform\nout['platform']=platform.platform()\nout['uptime_s']=round(float(open('/proc/uptime').read().split()[0]),1)\nout['mem_mb']=round(int([l for l in open('/proc/meminfo') if l.startswith('MemAvailable')][0].split()[1])/1024)"
+  "code": "import platform,os\nout['platform']=platform.platform()\nout['uptime']=os.popen('uptime').read().strip()\nout['mem_mb']=round(int([l for l in open('/proc/meminfo') if l.startswith('MemAvailable')][0].split()[1])/1024)"
  },
  {
   "name": "phone-llm-tag",
