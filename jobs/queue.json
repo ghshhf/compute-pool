@@ -30,5 +30,21 @@
   "prompt": "把消息归类为 行情/项目/广告/闲聊 之一，只输出一个词。消息：ETH 质押收益率升到 4.2%，机构开始入场了",
   "save": "llm_tag.txt",
   "max_tokens": 32
+ },
+ {
+  "name": "phone-tg-glassnode",
+  "kind": "fetch",
+  "target": "phone",
+  "url": "https://t.me/s/glassnode",
+  "as": "text",
+  "timeout": 45
+ },
+ {
+  "name": "phone-llm-batch",
+  "kind": "llm",
+  "target": "phone",
+  "save": "llm_batch.txt",
+  "max_tokens": 200,
+  "prompt": "对下面 5 条消息各输出一行 JSON，格式 {\"id\":n,\"cat\":\"行情|项目|广告|闲聊\"}，不要其他文字。\n1) BTC 突破 7 万刀\n2) 新公链主网上线，空投登记开始\n3) 加微信领 888 福利\n4) 今天天气不错\n5) ETH gas 降到 3 gwei"
  }
 ]
