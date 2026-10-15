@@ -9,5 +9,23 @@
   "kind": "fetch",
   "url": "https://t.me/s/glassnode",
   "save": "results/tg_glassnode.html"
+ },
+ {
+  "name": "t-fast",
+  "kind": "llm",
+  "target": "phone",
+  "model": "fast",
+  "max_tokens": 12,
+  "save": "t_fast.txt",
+  "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：ETH gas 降到 3 gwei 了 ->"
+ },
+ {
+  "name": "t-acc",
+  "kind": "llm",
+  "target": "phone",
+  "model": "accurate",
+  "max_tokens": 12,
+  "save": "t_acc.txt",
+  "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：ETH gas 降到 3 gwei 了 ->"
  }
 ]
