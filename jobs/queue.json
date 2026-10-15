@@ -1,1 +1,34 @@
-[{"name": "smoke-py", "kind": "py", "code": "import platform,sys\nprint('VM:', platform.platform(), sys.version)"}, {"name": "tg-direct", "kind": "fetch", "url": "https://t.me/s/glassnode", "save": "results/tg_glassnode.html"}]
+[
+ {
+  "name": "smoke-py",
+  "kind": "py",
+  "code": "import platform,sys\nprint('VM:', platform.platform(), sys.version)"
+ },
+ {
+  "name": "tg-direct",
+  "kind": "fetch",
+  "url": "https://t.me/s/glassnode",
+  "save": "results/tg_glassnode.html"
+ },
+ {
+  "name": "phone-ip",
+  "kind": "fetch",
+  "target": "phone",
+  "url": "https://myip.ipip.net",
+  "as": "text"
+ },
+ {
+  "name": "phone-sys",
+  "kind": "py",
+  "target": "phone",
+  "code": "import platform,os,time\nout['platform']=platform.platform()\nout['uptime_s']=round(time.time()-os.times().__class__ and float(open('/proc/uptime').read().split()[0]),1)\nout['mem_mb']=int([l for l in open('/proc/meminfo') if l.startswith('MemAvailable')][0].split()[1])/1024"
+ },
+ {
+  "name": "phone-llm-tag",
+  "kind": "llm",
+  "target": "phone",
+  "prompt": "把消息归类为 行情/项目/广告/闲聊 之一，只输出一个词。消息：ETH 质押收益率升到 4.2%，机构开始入场了",
+  "save": "llm_tag.txt",
+  "max_tokens": 32
+ }
+]
