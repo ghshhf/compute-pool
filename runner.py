@@ -22,12 +22,16 @@ def do(job):
     return {"ok": False, "err": "unknown kind"}
 
 def main():
-    jobs = []
+    queued = []
     if os.path.exists("jobs/queue.json"):
-        jobs = json.load(open("jobs/queue.json", encoding="utf-8"))
+        try:
+            queued = json.load(open("jobs/queue.json", encoding="utf-8")) or []
+        except Exception as e:
+            queued = []
+            print("queue parse error:", e)
     dt = os.environ.get("DISPATCH_TASK", "").strip()
-    if dt:
-        jobs = [{"kind": "py", "code": dt, "name": "dispatch"}]
+    # dispatch 任务优先级最高，且不动队列
+    jobs = [{"kind": "py", "code": dt, "name": "dispatch"}] if dt else queued
     os.makedirs("results", exist_ok=True)
     log = []
     for j in jobs:
@@ -41,8 +45,10 @@ def main():
         log.append(r)
         print(name, "->", json.dumps(r, ensure_ascii=False)[:200])
     open("results/last_run.json", "w", encoding="utf-8").write(json.dumps(log, ensure_ascii=False, indent=1))
-    # 消费掉队列（一次性）
-    if jobs and os.path.exists("jobs/queue.json"):
-        os.remove("jobs/queue.json")
+    # 消费掉队列（一次性）：置空而不是删除文件。
+    # 删除只发生在 runner VM 上、永远进不了仓库（workflow 只 add results/），
+    # 结果就是同一批任务每轮都被重复执行；置空后随 git add jobs/ 落库。
+    if not dt and queued:
+        open("jobs/queue.json", "w", encoding="utf-8").write("[]\n")
 
 main()
