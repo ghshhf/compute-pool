@@ -1,20 +1,74 @@
 [
- {
-  "name": "t-fast",
-  "kind": "llm",
-  "target": "phone",
-  "model": "fast",
-  "max_tokens": 12,
-  "save": "t_fast.txt",
-  "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：ETH gas 降到 3 gwei 了 ->"
- },
- {
-  "name": "t-acc",
-  "kind": "llm",
-  "target": "phone",
-  "model": "accurate",
-  "max_tokens": 12,
-  "save": "t_acc.txt",
-  "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：ETH gas 降到 3 gwei 了 ->"
- }
+  {
+    "name": "t-fast",
+    "kind": "llm",
+    "target": "phone",
+    "model": "fast",
+    "max_tokens": 12,
+    "save": "t_fast.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：ETH gas 降到 3 gwei 了 ->"
+  },
+  {
+    "name": "t-acc",
+    "kind": "llm",
+    "target": "phone",
+    "model": "accurate",
+    "max_tokens": 12,
+    "save": "t_acc.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：ETH gas 降到 3 gwei 了 ->"
+  },
+  {
+    "name": "r-sol",
+    "kind": "llm",
+    "target": "phone",
+    "model": "fast",
+    "max_tokens": 12,
+    "save": "r_sol.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：SOL 突破前高 210 了，量能跟上 ->"
+  },
+  {
+    "name": "r-discord",
+    "kind": "llm",
+    "target": "phone",
+    "model": "accurate",
+    "max_tokens": 12,
+    "save": "r_discord.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：我们新开了 Discord，欢迎来撸测试网空投 ->"
+  },
+  {
+    "name": "r-wechat",
+    "kind": "llm",
+    "target": "phone",
+    "model": "fast",
+    "max_tokens": 12,
+    "save": "r_wechat.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：加微信 xx 带你单，稳赚不赔 ->"
+  },
+  {
+    "name": "r-lunch",
+    "kind": "llm",
+    "target": "phone",
+    "model": "accurate",
+    "max_tokens": 12,
+    "save": "r_lunch.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：中午吃啥，外卖到了吗 ->"
+  },
+  {
+    "name": "r-fed",
+    "kind": "llm",
+    "target": "phone",
+    "model": "fast",
+    "max_tokens": 12,
+    "save": "r_fed.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：美联储利率决议今晚凌晨 2 点 ->"
+  },
+  {
+    "name": "r-audit",
+    "kind": "llm",
+    "target": "phone",
+    "model": "accurate",
+    "max_tokens": 12,
+    "save": "r_audit.txt",
+    "prompt": "分类任务：把消息归为 行情/项目/广告/闲聊，只输出一个词。\n例：BTC 涨到 7 万 -> 行情；扫码进群领红包 -> 广告；今天下雨 -> 闲聊。\n消息：代币合约已审计，审计报告发群文件了 ->"
+  }
 ]
